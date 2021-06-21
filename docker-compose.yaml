@@ -58,7 +58,7 @@ services:
     networks:
       - frontNOOOOO
 
-nginx-demo:
+  nginx-demo:
     container_name: nginx-demo
     image: nginx:1.13
     restart: always
