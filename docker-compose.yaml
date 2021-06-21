@@ -10,8 +10,8 @@ services:
       - MYSQL_DATABASE=mysql
       - MYSQL_USER=myapp-user
       - MYSQL_PASSWORD=password
-    ports:
-      - 3306:3306
+#    ports:
+#      - 3306:3306
     volumes:
       - /var/lib/mysql
     healthcheck:
@@ -36,27 +36,16 @@ services:
       - DATABASE_PORT=3306
     networks:
       - back
-      - front
 
   frontend:
     container_name: frontend
     build: ./frontend
-    ports:
-      - 3000:3000
+#    ports:
+#      - 3001:3000
     depends_on:
       - backend
     networks:
       - front
-
-  frontend_diff_network:
-    container_name: frontend_diff_network
-    build: ./frontend
-    ports:
-      - 3001:3000
-    depends_on:
-      - backend
-    networks:
-      - frontNOOOOO
 
   nginx-demo:
     container_name: nginx-demo
@@ -68,16 +57,12 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
     depends_on:
-      - backend
       - frontend
     networks:
       - front
-      - back
 
 networks:
   front:
-    driver: bridge
-  frontNOOOOO:
     driver: bridge
   back:
     driver: bridge

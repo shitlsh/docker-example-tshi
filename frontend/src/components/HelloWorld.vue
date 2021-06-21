@@ -28,23 +28,30 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
     <h3>Have a try with database</h3>
-    <ul>
-      <li>
-        <a
-          href="http://localhost:8080/api/database"
-          target="_blank">
-          test with backend
-        </a>
-      </li>
-    </ul>
+    <button v-on:click='test'>test</button>
   </div>
 </template>
 
 <script>
+import Vue from "vue";
+import axios from "axios";
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+
+  methods: {
+    test: function () {
+      axios.get('/api/database')
+          .then((response) => {
+            alert(response.data);
+          })
+          .catch((error) => {
+            alert(error)
+          });
+    }
   }
 }
 </script>
