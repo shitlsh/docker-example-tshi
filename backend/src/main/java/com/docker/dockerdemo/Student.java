@@ -1,4 +1,4 @@
-package com.docker.dockerdemoluna;
+package com.docker.dockerdemo;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

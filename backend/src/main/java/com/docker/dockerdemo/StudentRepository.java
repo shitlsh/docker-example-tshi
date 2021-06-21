@@ -1,4 +1,4 @@
-package com.docker.dockerdemoluna;
+package com.docker.dockerdemo;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

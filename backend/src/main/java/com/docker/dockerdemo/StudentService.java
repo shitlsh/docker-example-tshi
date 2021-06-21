@@ -1,4 +1,4 @@
-package com.docker.dockerdemoluna;
+package com.docker.dockerdemo;
 
 import org.springframework.stereotype.Service;
 
