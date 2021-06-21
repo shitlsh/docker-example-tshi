@@ -58,8 +58,8 @@ services:
     networks:
       - frontNOOOOO
 
-  luna-nginx:
-    container_name: luna-nginx
+nginx-demo:
+    container_name: nginx-demo
     image: nginx:1.13
     restart: always
     ports:

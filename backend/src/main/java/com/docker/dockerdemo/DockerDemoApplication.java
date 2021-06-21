@@ -8,23 +8,22 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class DockerDemoLunaApplication {
+public class DockerDemoApplication {
 
-	private static final Logger log = LoggerFactory.getLogger(DockerDemoLunaApplication.class);
+	private static final Logger log = LoggerFactory.getLogger(DockerDemoApplication.class);
 
 	public static void main(String[] args) {
-		System.out.println(" Hello, Luna ");
-		SpringApplication.run(DockerDemoLunaApplication.class, args);
+		SpringApplication.run(DockerDemoApplication.class, args);
 	}
 
 	@Bean
 	public CommandLineRunner demo(StudentRepository studentRepository) {
 		return (args) -> {
 			// SetUp studentRepository
-			studentRepository.save(new Student(1L,"Luna"));
-			studentRepository.save(new Student(2L, "Yue Zhang"));
-			studentRepository.save(new Student(3L, "lzhang"));
-			studentRepository.save(new Student(4L, "Luna Zhang"));
+			studentRepository.save(new Student(1L,"Test Student1"));
+			studentRepository.save(new Student(2L,"Test Student2"));
+			studentRepository.save(new Student(3L,"Test Student3"));
+			studentRepository.save(new Student(4L,"Test Student4"));
 
 			// fetch all Student
 			log.info("Student found with findAll():");

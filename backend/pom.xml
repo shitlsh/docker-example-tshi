@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.docker</groupId>
-	<artifactId>docker-demo-luna</artifactId>
+	<artifactId>docker-demo-springboot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>docker-demo-luna</name>
+	<name>docker-demo-springboot</name>
 	<description>Demo project for Docker</description>
 	<properties>
 		<java.version>1.8</java.version>

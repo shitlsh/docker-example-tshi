@@ -1,10 +1,10 @@
-package com.docker.dockerdemoluna;
+package com.docker.dockerdemo;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 //@SpringBootTest
-class DockerDemoLunaApplicationTests {
+class DockerDemoApplicationTests {
 
 	@Test
 	void contextLoads() {
